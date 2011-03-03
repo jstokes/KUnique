@@ -11,11 +11,13 @@ Feature:
 
 		Scenario Outline: calculating permutations
 				Given n_array is "<n_array>"
-				And N = "<n>"
 				And K = "<k>"
 				When the program is finished calculating
 				Then the output should be "<output>"
 
 				Scenarios: impossible permutation
-						| n_array | n | k | output   |
-						| [2, 2]  | 1 | 1 | [-1]     |
+						|       n_array      | k | output  			 |
+						| [2, 2]             | 1 | [-1]    			 |
+						| [2, 3, 2]          | 1 | [-1]     		 |
+						| [2, 2, 2, 3]       | 2 | [-1]          |
+						| [2, 10, 2, 8, 3, 6]| 2 |[2,3,2,6,8,10] |
