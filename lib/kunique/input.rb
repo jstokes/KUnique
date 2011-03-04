@@ -4,13 +4,13 @@ module KUnique
 		
 		attr_reader :num_test_cases, :num_elements, :num_perm, :element_ary
 		def initialize(output)
+			#read in number of test cases
+			@num_test_cases = gets.to_i
 			@output = output
 		end
 		
 		def read
-			#read in number of test cases
-			@num_test_cases = gets.to_i
-			
+		
 			#read in number of elements and permutations (n, k)
 			@num_elements, @num_perm = gets.split
 			@num_elements = @num_elements.to_i

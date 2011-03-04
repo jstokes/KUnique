@@ -8,10 +8,10 @@ end
 
 When /^the program is finished calculating$/ do
   @calc = KUnique::PermCalc.new(@k, @n_array)
-	@calc.find_permutation
 end
 
 Then /^the output should be "([^"]*)"$/ do |answer|
+	@calc.find_permutation
 	@calc.output.inspect.should == answer
 end
 

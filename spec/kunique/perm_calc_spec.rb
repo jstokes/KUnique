@@ -7,7 +7,7 @@ module KUnique
 			it "returns [-1]" do
 				calc = PermCalc.new(1, [2, 2])
 				calc.find_permutation
-				calc.output.should == [-1]
+				calc.output.inspect.should == [-1].inspect
 			end
 		end
 
@@ -16,7 +16,7 @@ module KUnique
 			it "returns the correct array with n/k permutations of size k" do
 				calc = PermCalc.new(2, [2, 10, 2, 8, 3, 6])
 				calc.find_permutation
-				calc.output.should == [2, 3, 2, 6, 8, 10]
+				calc.output.should == [2, 3, 2, 6, 8, 10].to_a
 			end
 		end
 

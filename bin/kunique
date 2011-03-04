@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
+require 'kunique'
+
+input = KUnique::Input.new(STDOUT)
+puts input.num_test_cases
+
+(1..input.num_test_cases).each do 
+	input.read	
+	calc = KUnique::PermCalc.new(input.num_perm, input.element_ary)
+	calc.find_permutation
+	puts calc.output.inspect
+end
+
