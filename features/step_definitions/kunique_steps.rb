@@ -7,7 +7,7 @@ Given /^K = "([^"]*)"$/ do |k|
 end
 
 When /^the program is finished calculating$/ do
-  @calc = KUnique::PermCalc.new(@k, @n_array)
+  @calc = KUnique::PermCalc.new(@k.to_i, @n_array.split(/,/))
 end
 
 Then /^the output should be "([^"]*)"$/ do |answer|

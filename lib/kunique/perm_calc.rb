@@ -13,7 +13,6 @@ module KUnique
 		def find_permutation
 			uniq = create_hash
 			pqueue = create_pqueue(uniq)
-			pqueue.sort!
 			@output = create_answer(pqueue)
 		end
 
@@ -30,7 +29,7 @@ module KUnique
 			uniq_hash.each do |elem, freq|
 				pqueue << UniqueNumber.new(elem, freq)
 			end
-			pqueue
+			pqueue.sort
 		end
 
 		def create_answer(pqueue)

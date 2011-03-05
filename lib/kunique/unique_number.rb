@@ -9,8 +9,11 @@ module KUnique
 		end
 
 		def <=>(other)
-			frequency <=> other.frequency unless frequency == other.frequency
-			element <=> other.element
+			if (frequency == other.frequency)
+				element <=> other.element 
+			else
+				other.frequency <=> frequency 
+			end
 		end
 
 		def inspect
